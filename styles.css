@@ -1,56 +1,101 @@
 body {
-    margin:0; font-family:'Montserrat', sans-serif; background:#1c1c1c; color:#f3f3f3; line-height:1.7;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #1c1c1c;
+    color: #f3f3f3;
+    line-height: 1.6;
 }
-.section {padding:30px 20px; max-width:900px; margin:auto;}
-h1,h2{color:#FFD700;}
-p{font-size:17px;}
 
-/* Hero */
-.hero {position:relative; min-height:550px; background:url('./assets/img/hero-fj40.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 20px;}
-.hero-overlay {position:absolute; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.45);}
-.hero-content {position:relative; z-index:2; max-width:800px;}
-.hero h1{font-size:52px; margin-bottom:15px;}
-.hero p{font-size:18px; margin-bottom:20px;}
-
-/* Fade-in Animation */
-.fade-in {opacity:0; transform:translateY(20px); animation: fadeInUp 1s forwards;}
-@keyframes fadeInUp{to{opacity:1; transform:translateY(0);}}
-
-/* Buttons */
-.cta-btn, .buy-btn {background:#FFD700; color:#1c1c1c; padding:15px 35px; border-radius:6px; font-weight:bold; display:inline-block; margin:10px 0; text-decoration:none;}
-.cta-btn:hover, .buy-btn:hover{text-decoration:none; background:#e6c200;}
-
-/* Features */
-.feature-list{list-style:disc; padding-left:20px; color:#f3f3f3;}
-.feature-list li{margin-bottom:10px;}
-.feature-list li::before{content:'•'; color:#FFD700; display:inline-block; width:1em; margin-left:-1em;}
-
-/* Carousel */
-.carousel{position:relative; overflow:hidden; margin-top:30px;}
-.carousel-track{display:flex; transition:transform 0.4s ease-in-out;}
-.carousel-slide{min-width:100%; position:relative; text-align:center;}
-.carousel-slide img{width:100%; max-height:500px; object-fit:cover; cursor:pointer; border-radius:8px; transition: transform 0.3s ease;}
-.carousel-slide img:hover{transform: scale(1.03);}
-.carousel-slide .caption{position:absolute; bottom:15px; left:50%; transform:translateX(-50%); color:#1c1c1c; font-weight:bold; background:rgba(255,215,0,0.8); padding:6px 12px; border-radius:6px;}
-.carousel-btn{position:absolute; top:50%; transform:translateY(-50%); background: rgba(255,255,255,0.15); color:#fff; border:none; font-size:30px; padding:12px; cursor:pointer; border-radius:50%; z-index:10;}
-.carousel-btn.prev{left:10px;} .carousel-btn.next{right:10px;}
-
-/* FAQ */
-.faq-item{margin-bottom:15px;}
-.faq-question{width:100%; background:#222; color:#FFD700; border:none; padding:12px 15px; text-align:left; font-weight:bold; font-size:16px; cursor:pointer; border-radius:5px; transition: background 0.2s;}
-.faq-question:hover{background:#333;}
-.faq-answer{display:none; padding:10px 15px; background:#333; border-radius:5px; margin-top:5px; color:#f3f3f3; transition: max-height 0.3s ease; overflow:hidden;}
-
-/* Purchase Section */
-.buy{text-align:center;}
-
-/* Footer */
-.footer{text-align:center; padding:25px 20px; background:#111; color:#ccc;}
-
-/* Responsive */
-@media(max-width:768px){
-    .hero{min-height:400px;}
-    .hero h1{font-size:36px;}
-    .hero p{font-size:16px;}
-    .cta-btn{width:80%; text-align:center; margin:10px auto;}
+.section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
 }
+
+h1,h2 { font-weight: 700; color: #FFD700; }
+
+.hero {
+    position: relative;
+    min-height: 500px;
+    background: url('./assets/img/hero-fj40.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top:0; left:0; width:100%; height:100%;
+    background-color: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    animation: fadeIn 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn { to {opacity:1;} }
+
+.cta-btn, .buy-btn {
+    background: #FFD700;
+    color: #1c1c1c;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.cta-btn:hover, .buy-btn:hover { background: #e6c200; }
+
+.feature-list { list-style: disc; padding-left: 20px; margin-top:15px; }
+.feature-list li { margin-bottom: 10px; }
+
+.carousel { position: relative; overflow: hidden; margin: 30px auto; max-width:800px; }
+.carousel-track { display:flex; transition: transform 0.4s ease-in-out; }
+.carousel-slide { min-width: 100%; position: relative; text-align: center; cursor:pointer; }
+.carousel-slide img { width: 100%; max-height: 500px; object-fit: cover; border-radius: 8px; }
+.carousel-slide .caption {
+    position: absolute; bottom: 10px; left:50%; transform: translateX(-50%);
+    color: #1c1c1c; background: rgba(255, 215, 0, 0.7);
+    padding: 5px 10px; border-radius:5px; font-weight:bold;
+}
+.carousel-btn {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.2); color:#fff; border:none;
+    font-size: 30px; padding:10px; cursor:pointer; border-radius:50%; z-index:10;
+}
+.carousel-btn.prev { left:10px; }
+.carousel-btn.next { right:10px; }
+
+.faq-item { margin-bottom: 20px; }
+.faq-item p { display:none; margin-top:5px; }
+
+.footer { text-align:center; padding:30px 20px; background:#111; color:#ccc; }
+
+/* Purchase Section Centered */
+#buy {
+    text-align: center;
+}
+
+/* FAQ - Make clickable */
+.faq-item strong {
+    display: block;
+    background: rgba(255, 215, 0, 0.1);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.faq-item strong:hover {
+    background: rgba(255, 215, 0, 0.3);
+}
+
