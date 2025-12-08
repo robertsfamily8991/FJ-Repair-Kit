@@ -16,7 +16,7 @@ h1,h2 { font-weight: 700; color: #FFD700; }
 
 .hero {
     position: relative;
-    min-height: 500px;
+    min-height: 1200px;
     background: url('./assets/img/hero-fj40.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
